@@ -15,7 +15,6 @@
 		412A90C91A4F347A00D31434 /* SwiftSoundManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A90C81A4F347A00D31434 /* SwiftSoundManagerTests.swift */; };
 		41A6E5551A50449500D7C8FF /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5541A50449500D7C8FF /* Sounds.swift */; };
 		41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55A1A50638200D7C8FF /* boxing-bell.wav */; };
-		41A6E55D1A506D7800D7C8FF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55C1A506D7800D7C8FF /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		412A90C81A4F347A00D31434 /* SwiftSoundManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSoundManagerTests.swift; sourceTree = "<group>"; };
 		41A6E5541A50449500D7C8FF /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		41A6E55A1A50638200D7C8FF /* boxing-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "boxing-bell.wav"; sourceTree = "<group>"; };
-		41A6E55C1A506D7800D7C8FF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = SwiftSoundManager/LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 		412A90A41A4F347900D31434 = {
 			isa = PBXGroup;
 			children = (
-				41A6E55C1A506D7800D7C8FF /* LICENSE */,
 				412A90AF1A4F347900D31434 /* SwiftSoundManager */,
 				412A90C51A4F347A00D31434 /* SwiftSoundManagerTests */,
 				412A90AE1A4F347900D31434 /* Products */,
@@ -206,7 +203,6 @@
 				412A90BD1A4F347900D31434 /* LaunchScreen.xib in Resources */,
 				41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */,
 				412A90BA1A4F347900D31434 /* Images.xcassets in Resources */,
-				41A6E55D1A506D7800D7C8FF /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
