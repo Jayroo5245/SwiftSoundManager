@@ -7,19 +7,36 @@
 //
 
 import UIKit
+import AudioToolbox
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIPickerViewDelegate {
+ 
+    var sound: Sounds = Sounds()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return sound.sounds.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return sound.sounds[row].name
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let audioID: SystemSoundID = sound.sounds[row].audioId
+        sound.playSystemSound(audioID)
+    }
 
 }
 

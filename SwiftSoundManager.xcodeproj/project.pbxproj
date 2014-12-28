@@ -13,6 +13,8 @@
 		412A90BA1A4F347900D31434 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412A90B91A4F347900D31434 /* Images.xcassets */; };
 		412A90BD1A4F347900D31434 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412A90BB1A4F347900D31434 /* LaunchScreen.xib */; };
 		412A90C91A4F347A00D31434 /* SwiftSoundManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412A90C81A4F347A00D31434 /* SwiftSoundManagerTests.swift */; };
+		41A6E5551A50449500D7C8FF /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5541A50449500D7C8FF /* Sounds.swift */; };
+		41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55A1A50638200D7C8FF /* boxing-bell.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		412A90C21A4F347A00D31434 /* SwiftSoundManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSoundManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		412A90C71A4F347A00D31434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		412A90C81A4F347A00D31434 /* SwiftSoundManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSoundManagerTests.swift; sourceTree = "<group>"; };
+		41A6E5541A50449500D7C8FF /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		41A6E55A1A50638200D7C8FF /* boxing-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "boxing-bell.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		412A90AF1A4F347900D31434 /* SwiftSoundManager */ = {
 			isa = PBXGroup;
 			children = (
+				41A6E55A1A50638200D7C8FF /* boxing-bell.wav */,
 				412A90B21A4F347900D31434 /* AppDelegate.swift */,
 				412A90B41A4F347900D31434 /* ViewController.swift */,
 				412A90B61A4F347900D31434 /* Main.storyboard */,
 				412A90B91A4F347900D31434 /* Images.xcassets */,
 				412A90BB1A4F347900D31434 /* LaunchScreen.xib */,
 				412A90B01A4F347900D31434 /* Supporting Files */,
+				41A6E5541A50449500D7C8FF /* Sounds.swift */,
 			);
 			path = SwiftSoundManager;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 				TargetAttributes = {
 					412A90AC1A4F347900D31434 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 47SBRQVXRC;
 					};
 					412A90C11A4F347A00D31434 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -194,6 +201,7 @@
 			files = (
 				412A90B81A4F347900D31434 /* Main.storyboard in Resources */,
 				412A90BD1A4F347900D31434 /* LaunchScreen.xib in Resources */,
+				41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */,
 				412A90BA1A4F347900D31434 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A6E5551A50449500D7C8FF /* Sounds.swift in Sources */,
 				412A90B51A4F347900D31434 /* ViewController.swift in Sources */,
 				412A90B31A4F347900D31434 /* AppDelegate.swift in Sources */,
 			);
@@ -338,9 +347,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftSoundManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftSoundManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -407,6 +422,7 @@
 				412A90CE1A4F347A00D31434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		412A90CF1A4F347A00D31434 /* Build configuration list for PBXNativeTarget "SwiftSoundManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +431,7 @@
 				412A90D11A4F347A00D31434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
