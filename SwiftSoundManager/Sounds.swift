@@ -38,6 +38,12 @@ class Sounds: NSObject {
         AudioServicesCreateSystemSoundID(boxingBellSoundURL, &boxingBell)
         sounds.append(Sound(name: "Boxing Bell", audioId: boxingBell))
         
+        // Modified http://www.freesound.org/people/the_very_Real_Horst/sounds/193040/
+        let taoChiGongSoundURL = NSBundle.mainBundle().URLForResource("tao-chi-gong", withExtension: "wav")
+        var taoChiGong: SystemSoundID = 1
+        AudioServicesCreateSystemSoundID(taoChiGongSoundURL, &taoChiGong)
+        sounds.append(Sound(name: "Tao Chi Gong", audioId: taoChiGong))
+        
         return sounds
     }
     

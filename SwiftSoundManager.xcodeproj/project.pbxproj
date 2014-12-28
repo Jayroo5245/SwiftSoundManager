@@ -16,6 +16,7 @@
 		41A6E5551A50449500D7C8FF /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5541A50449500D7C8FF /* Sounds.swift */; };
 		41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55A1A50638200D7C8FF /* boxing-bell.wav */; };
 		41A6E55F1A506F8A00D7C8FF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55E1A506F8A00D7C8FF /* LICENSE */; };
+		41A6E5671A50747700D7C8FF /* tao-chi-gong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E5661A50747700D7C8FF /* tao-chi-gong.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		41A6E5541A50449500D7C8FF /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		41A6E55A1A50638200D7C8FF /* boxing-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "boxing-bell.wav"; sourceTree = "<group>"; };
 		41A6E55E1A506F8A00D7C8FF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		41A6E5661A50747700D7C8FF /* tao-chi-gong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tao-chi-gong.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		412A90AF1A4F347900D31434 /* SwiftSoundManager */ = {
 			isa = PBXGroup;
 			children = (
+				41A6E5661A50747700D7C8FF /* tao-chi-gong.wav */,
 				41A6E55A1A50638200D7C8FF /* boxing-bell.wav */,
 				412A90B21A4F347900D31434 /* AppDelegate.swift */,
 				412A90B41A4F347900D31434 /* ViewController.swift */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				412A90B81A4F347900D31434 /* Main.storyboard in Resources */,
+				41A6E5671A50747700D7C8FF /* tao-chi-gong.wav in Resources */,
 				412A90BD1A4F347900D31434 /* LaunchScreen.xib in Resources */,
 				41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */,
 				412A90BA1A4F347900D31434 /* Images.xcassets in Resources */,
