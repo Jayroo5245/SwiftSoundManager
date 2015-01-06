@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fuk-W4-fsO">
-                                <rect key="frame" x="-16" y="195" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuk-W4-fsO">
+                                <rect key="frame" x="-16" y="219" width="600" height="162"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ltz-hV-HmB"/>
                                 </connections>
@@ -26,10 +26,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Fuk-W4-fsO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ON7-V6-IlK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fuk-W4-fsO" secondAttribute="bottom" id="OcZ-3M-TaR"/>
-                            <constraint firstItem="Fuk-W4-fsO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ozY-PE-fk6"/>
-                            <constraint firstItem="Fuk-W4-fsO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t6d-6p-YOK"/>
+                            <constraint firstAttribute="centerY" secondItem="Fuk-W4-fsO" secondAttribute="centerY" id="EeA-Qa-TxV"/>
+                            <constraint firstItem="Fuk-W4-fsO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-32" id="XHA-At-AOn"/>
+                            <constraint firstItem="Fuk-W4-fsO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jEy-I0-6yK"/>
                         </constraints>
                     </view>
                 </viewController>
