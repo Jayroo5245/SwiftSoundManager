@@ -45,12 +45,11 @@ class SoundTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell:UITableViewCell! = self.tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
+        var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
             
-        cell.textLabel!.text = self.soundManager.sounds[indexPath.row].displayName
+        cell.textLabel!.text = soundManager.sounds[indexPath.row].displayName
         
         if (lastSelected != nil && lastSelected! == indexPath) {
-            // select new
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -65,20 +64,10 @@ class SoundTableViewController: UITableViewController {
         let audioID: SystemSoundID = self.soundManager.sounds[indexPath.row].audioID
         soundManager.playSystemSound(audioID)
         
-//        if (lastSelected != nil) {
-//            // deselect old
-//            var old: UITableViewCell! = self.tableView.cellForRowAtIndexPath(self.lastSelected)
-//            old.accessoryType = .None
-//        }
-//    
-//        // select new
-//        var cell: UITableViewCell! = self.tableView.cellForRowAtIndexPath(indexPath)
-//        cell.accessoryType = .Checkmark
-        
         // keep track of the last selected cell
-        self.lastSelected = indexPath
-        
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        lastSelected = indexPath
+
+        tableView.reloadData()
         
         SwiftSoundManagerDefaults.sharedInstance.alertChosen = soundManager.sounds[indexPath.row].soundName
     }

@@ -40,7 +40,7 @@
 		412A90C21A4F347A00D31434 /* SwiftSoundManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSoundManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		412A90C71A4F347A00D31434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		412A90C81A4F347A00D31434 /* SwiftSoundManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSoundManagerTests.swift; sourceTree = "<group>"; };
-		41700F661A5C29FF004291A2 /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
+		41700F661A5C29FF004291A2 /* SoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		41700F691A5CAF71004291A2 /* SwiftSoundManagerDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSoundManagerDefaults.swift; sourceTree = "<group>"; };
 		41A6E5541A50449500D7C8FF /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		41A6E55A1A50638200D7C8FF /* boxing-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "boxing-bell.wav"; sourceTree = "<group>"; };

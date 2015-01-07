@@ -26,16 +26,12 @@ class SwiftSoundManagerDefaults: NSObject {
         }
     }
     
-    override init() {
-        super.init()
-    }
-    
     class var sharedInstance: SwiftSoundManagerDefaults {
         return _SwiftSoundManagerDefaultsSharedInstance
     }
-//    func registerDefaults() {
-//        let defaultOptions: [NSObject: AnyObject] = [Defaults.alertChosen: "ding-a-ling"]
-//        defaults.registerDefaults(defaultOptions)
-//    }
+    func registerDefaults() {
+        let defaultOptions: [NSObject: AnyObject] = [Defaults.alertChosen: ""]
+        defaults.registerDefaults(defaultOptions)
+    }
 
 }
