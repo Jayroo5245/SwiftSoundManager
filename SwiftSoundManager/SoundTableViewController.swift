@@ -27,7 +27,7 @@ class SoundTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let row = soundManager.rowForSoundName(SwiftSoundManagerDefaults.sharedInstance.alertChosen)
-        if (row > 0) {
+        if (row >= 0) {
             lastSelected = NSIndexPath(forRow: row, inSection: 0)
         }
     }

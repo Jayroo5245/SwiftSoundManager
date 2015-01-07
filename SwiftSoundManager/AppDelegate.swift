@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftSoundManagerDefaults.sharedInstance.registerDefaults()
         
         self.window?.tintColor = UIColor().primaryTintColor()
-        UIColor().styleNavigationBarAppearance()
+        styleNavigationBarAppearance()
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
         
         return true
@@ -45,7 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func styleNavigationBarAppearance() {
+        UINavigationBar.appearance().barTintColor = UIColor().mainBackgroundColor()
+        var attributes = [
+            NSForegroundColorAttributeName: UIColor().primaryTextColor(),
+            NSFontAttributeName: UIFont(name: "Avenir-Roman", size: 18)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+    }
 
 }
 

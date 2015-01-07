@@ -21,16 +21,7 @@ extension UIColor {
     func primaryTintColor() -> UIColor {
         return primaryTextColor()
     }
-    
-    func styleNavigationBarAppearance() {
-        UINavigationBar.appearance().barTintColor = mainBackgroundColor()
-        var attributes = [
-            NSForegroundColorAttributeName: primaryTextColor(),
-            NSFontAttributeName: UIFont(name: "Avenir-Roman", size: 18)!
-        ]
-        UINavigationBar.appearance().titleTextAttributes = attributes
-    }
-    
+        
     func tableCellBackgroundColor() -> UIColor {
         return UIColor(white:0.26, alpha:1.0)
     }
