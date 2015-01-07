@@ -30,8 +30,8 @@ class SoundManager {
         mutableSounds.append(Sound(displayName: "Bells", soundName: "bells", audioID: 1009))
         mutableSounds.append(Sound(displayName: "Ding", soundName: "ding", audioID: 1013))
         mutableSounds.append(Sound(displayName: "Low Ting", soundName: "low-ting", audioID: 1052))
-        mutableSounds.append(Sound(displayName: "Low Beep", soundName: "low-beep", audioID: 1070))
         mutableSounds.append(Sound(displayName: "Wine Glass", soundName: "wine-glass", audioID: 1054))
+        mutableSounds.append(Sound(displayName: "Low Beep", soundName: "low-beep", audioID: 1070))
         mutableSounds.append(Sound(displayName: "Double Beep", soundName: "double-beep", audioID: 1255))
         
         // Modified http://www.freesound.org/people/Benboncan/sounds/66951/

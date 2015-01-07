@@ -18,6 +18,7 @@
 		41A6E55B1A50638200D7C8FF /* boxing-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55A1A50638200D7C8FF /* boxing-bell.wav */; };
 		41A6E55F1A506F8A00D7C8FF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E55E1A506F8A00D7C8FF /* LICENSE */; };
 		41A6E5671A50747700D7C8FF /* tao-chi-gong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E5661A50747700D7C8FF /* tao-chi-gong.wav */; };
+		41E5CE011A5D803000C329A9 /* UIColor+SwiftSoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5CE001A5D803000C329A9 /* UIColor+SwiftSoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		41A6E55A1A50638200D7C8FF /* boxing-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "boxing-bell.wav"; sourceTree = "<group>"; };
 		41A6E55E1A506F8A00D7C8FF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		41A6E5661A50747700D7C8FF /* tao-chi-gong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tao-chi-gong.wav"; sourceTree = "<group>"; };
+		41E5CE001A5D803000C329A9 /* UIColor+SwiftSoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SwiftSoundManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +90,12 @@
 		412A90AF1A4F347900D31434 /* SwiftSoundManager */ = {
 			isa = PBXGroup;
 			children = (
+				412A90B61A4F347900D31434 /* Main.storyboard */,
 				41700F691A5CAF71004291A2 /* SwiftSoundManagerDefaults.swift */,
 				412A90B21A4F347900D31434 /* AppDelegate.swift */,
-				412A90B61A4F347900D31434 /* Main.storyboard */,
 				41A6E5541A50449500D7C8FF /* SoundManager.swift */,
 				41700F661A5C29FF004291A2 /* SoundTableViewController.swift */,
+				41E5CE001A5D803000C329A9 /* UIColor+SwiftSoundManager.swift */,
 				412A90B91A4F347900D31434 /* Images.xcassets */,
 				412A90BB1A4F347900D31434 /* LaunchScreen.xib */,
 				412A90B01A4F347900D31434 /* Supporting Files */,
@@ -241,6 +244,7 @@
 			files = (
 				41A6E5551A50449500D7C8FF /* SoundManager.swift in Sources */,
 				41700F671A5C29FF004291A2 /* SoundTableViewController.swift in Sources */,
+				41E5CE011A5D803000C329A9 /* UIColor+SwiftSoundManager.swift in Sources */,
 				41700F6A1A5CAF71004291A2 /* SwiftSoundManagerDefaults.swift in Sources */,
 				412A90B31A4F347900D31434 /* AppDelegate.swift in Sources */,
 			);

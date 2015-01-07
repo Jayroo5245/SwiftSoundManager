@@ -17,12 +17,17 @@ class SoundTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor().mainBackgroundColor()
+        view.tintColor = UIColor().primaryTintColor()
+        tableView.backgroundColor = UIColor().mainBackgroundColor()
+        tableView.separatorColor = UIColor().secondaryBorderColor()
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let row = soundManager.rowForSoundName(SwiftSoundManagerDefaults.sharedInstance.alertChosen)
-        if (row>0) {
+        if (row > 0) {
             lastSelected = NSIndexPath(forRow: row, inSection: 0)
         }
     }
@@ -48,6 +53,8 @@ class SoundTableViewController: UITableViewController {
         var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
             
         cell.textLabel!.text = soundManager.sounds[indexPath.row].displayName
+        cell.backgroundColor = UIColor().tableCellBackgroundColor()
+        cell.textLabel!.textColor = UIColor().primaryTextColor()
         
         if (lastSelected != nil && lastSelected! == indexPath) {
             cell.accessoryType = .Checkmark
