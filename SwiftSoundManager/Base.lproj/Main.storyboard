@@ -8,7 +8,6 @@
         <!--Sounds-->
         <scene sceneID="LZe-RH-MuT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rrg-Oc-WsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Sounds" id="5ht-1Q-icc" customClass="SoundTableViewController" customModule="SwiftSoundManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7bX-Bz-raE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -41,6 +40,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Sounds" id="TOs-YT-pVb"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrg-Oc-WsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1952" y="1795"/>
         </scene>

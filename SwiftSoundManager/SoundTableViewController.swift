@@ -11,7 +11,7 @@ import AudioToolbox
 
 class SoundTableViewController: UITableViewController {
     
-    var sound: Sounds = Sounds()
+    var soundManager: SoundManager = SoundManager()
     
     var lastSelected: NSIndexPath! = nil
 
@@ -19,6 +19,14 @@ class SoundTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let row = soundManager.rowForSoundName(SwiftSoundManagerDefaults.sharedInstance.alertChosen)
+        if (row>0) {
+            lastSelected = NSIndexPath(forRow: row, inSection: 0)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -32,33 +40,46 @@ class SoundTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return self.sound.sounds.count
+        return self.soundManager.sounds.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell:UITableViewCell! = self.tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
             
-        cell.textLabel!.text = self.sound.sounds[indexPath.row].name
+        cell.textLabel!.text = self.soundManager.sounds[indexPath.row].displayName
+        
+        if (lastSelected != nil && lastSelected! == indexPath) {
+            // select new
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
         
         return cell
     }
 
+    // MARK: - Table view data delegate
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let audioID: SystemSoundID = self.sound.sounds[indexPath.row].audioID
-        sound.playSystemSound(audioID)
+        let audioID: SystemSoundID = self.soundManager.sounds[indexPath.row].audioID
+        soundManager.playSystemSound(audioID)
         
-        if (lastSelected != nil) {
-            // deselect old
-            var old: UITableViewCell! = self.tableView.cellForRowAtIndexPath(self.lastSelected)
-            old.accessoryType = .None
-        }
-    
-        // select new
-        var cell: UITableViewCell! = self.tableView.cellForRowAtIndexPath(indexPath)
-        cell.accessoryType = .Checkmark
+//        if (lastSelected != nil) {
+//            // deselect old
+//            var old: UITableViewCell! = self.tableView.cellForRowAtIndexPath(self.lastSelected)
+//            old.accessoryType = .None
+//        }
+//    
+//        // select new
+//        var cell: UITableViewCell! = self.tableView.cellForRowAtIndexPath(indexPath)
+//        cell.accessoryType = .Checkmark
         
         // keep track of the last selected cell
-        self.lastSelected = indexPath;
+        self.lastSelected = indexPath
+        
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        
+        SwiftSoundManagerDefaults.sharedInstance.alertChosen = soundManager.sounds[indexPath.row].soundName
     }
 }
