@@ -27,7 +27,7 @@ class SoundTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let row = soundManager.rowForSoundName(SwiftSoundManagerDefaults.sharedInstance.alertChosen)
-        if (row >= 0) {
+        if row >= 0 {
             lastSelected = NSIndexPath(forRow: row, inSection: 0)
         }
     }
@@ -45,18 +45,18 @@ class SoundTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return self.soundManager.sounds.count
+        return self.soundManager.sounds!.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
+        let cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("soundCell", forIndexPath: indexPath) as UITableViewCell
             
-        cell.textLabel!.text = soundManager.sounds[indexPath.row].displayName
+        cell.textLabel!.text = soundManager.sounds![indexPath.row].displayName
         cell.backgroundColor = UIColor().tableCellBackgroundColor()
         cell.textLabel!.textColor = UIColor().primaryTextColor()
         
-        if (lastSelected != nil && lastSelected! == indexPath) {
+        if lastSelected != nil && lastSelected! == indexPath {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -68,7 +68,7 @@ class SoundTableViewController: UITableViewController {
     // MARK: - Table view data delegate
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let audioID: SystemSoundID = self.soundManager.sounds[indexPath.row].audioID
+        let audioID: SystemSoundID = self.soundManager.sounds![indexPath.row].audioID
         soundManager.playSystemSound(audioID)
         
         // keep track of the last selected cell
@@ -76,6 +76,6 @@ class SoundTableViewController: UITableViewController {
 
         tableView.reloadData()
         
-        SwiftSoundManagerDefaults.sharedInstance.alertChosen = soundManager.sounds[indexPath.row].soundName
+        SwiftSoundManagerDefaults.sharedInstance.alertChosen = soundManager.sounds![indexPath.row].soundName
     }
 }

@@ -9,9 +9,9 @@
 import UIKit
 import AudioToolbox
 
-class SoundManager {
+class SoundManager: NSObject {
     
-    let sounds: [Sound] = [Sound]()
+    var sounds: [Sound]?
     
     struct Sound {
         let displayName: String
@@ -19,7 +19,9 @@ class SoundManager {
         let audioID: SystemSoundID
     }
     
-    init() {
+    override init() {
+        sounds = [Sound]()
+        super.init()
         sounds = constructSounds()
     }
     
@@ -37,13 +39,13 @@ class SoundManager {
         // Modified http://www.freesound.org/people/Benboncan/sounds/66951/
         let boxingBellSoundURL = NSBundle.mainBundle().URLForResource("boxing-bell", withExtension: "wav")
         var boxingBell: SystemSoundID = 0
-        AudioServicesCreateSystemSoundID(boxingBellSoundURL, &boxingBell)
+        AudioServicesCreateSystemSoundID(boxingBellSoundURL!, &boxingBell)
         mutableSounds.append(Sound(displayName: "Boxing Bell", soundName: "Boxing Bell", audioID: boxingBell))
         
         // Modified http://www.freesound.org/people/the_very_Real_Horst/sounds/193040/
         let taoChiGongSoundURL = NSBundle.mainBundle().URLForResource("tao-chi-gong", withExtension: "wav")
         var taoChiGong: SystemSoundID = 1
-        AudioServicesCreateSystemSoundID(taoChiGongSoundURL, &taoChiGong)
+        AudioServicesCreateSystemSoundID(taoChiGongSoundURL!, &taoChiGong)
         mutableSounds.append(Sound(displayName: "Tao Chi Gong", soundName: "Tao Chi Gong", audioID: taoChiGong))
         
         return mutableSounds
@@ -58,8 +60,8 @@ class SoundManager {
     }
     
     func rowForSoundName(soundName: String) -> Int {
-        for index in 0...sounds.count-1 {
-            if (sounds[index].soundName == soundName) {
+        for index in 0...sounds!.count-1 {
+            if sounds![index].soundName == soundName {
                 return index
             }
         }

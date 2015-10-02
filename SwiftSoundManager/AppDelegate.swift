@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func styleNavigationBarAppearance() {
         UINavigationBar.appearance().barTintColor = UIColor().mainBackgroundColor()
-        var attributes = [
+        let attributes = [
             NSForegroundColorAttributeName: UIColor().primaryTextColor(),
             NSFontAttributeName: UIFont(name: "Avenir-Roman", size: 18)!
         ]

@@ -30,7 +30,7 @@ class SwiftSoundManagerDefaults: NSObject {
         return _SwiftSoundManagerDefaultsSharedInstance
     }
     func registerDefaults() {
-        let defaultOptions: [NSObject: AnyObject] = [Defaults.alertChosen: ""]
+        let defaultOptions: [String: AnyObject] = [Defaults.alertChosen: ""]
         defaults.registerDefaults(defaultOptions)
     }
 
